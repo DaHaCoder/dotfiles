@@ -1,0 +1,7 @@
+#!/bin/bash
+
+#sudo apt-get install sox
+#sudo apt-get install libsox-fmt-all
+
+cat ~/.local/bin/Spock.txt
+play -q ~/.local/bin/Spock_Livelong.mp3

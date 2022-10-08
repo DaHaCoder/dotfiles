@@ -1,0 +1,16 @@
+snippet t "A simple HTML tag" b
+<${1:div}>
+	Hello World!
+</${1/(\w+).*/$1/}>
+endsnippet 
+
+snippet todo "This is a TODO reminder" b
+<!-- TODO: ${1:desc} `!v strftime("%c")` -->
+endsnippet
+
+
+snippet a-trigger "A snippet with option 'A'" A
+<${1:div}>
+	HTML snippet with a-trigger! 
+</$1>
+endsnippet 

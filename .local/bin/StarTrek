@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#sudo apt-get install sox
+#sudo apt-get install libsox-fmt-all
+
+cat ~/.local/bin/StarTrek.txt
+
+play -q ~/.local/bin/Star-Trek-TOS-Intro.mp3

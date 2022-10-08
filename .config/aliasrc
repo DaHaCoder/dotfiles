@@ -1,0 +1,9 @@
+# My aliases
+alias ll='ls -lFh'
+alias lla='ls -lAh'
+alias lld='ls -lAdh .*'
+alias la='ls -a'
+alias ld='ls -d .*'
+alias l='ls -CF'
+alias c='clear'
+alias phbox='cd ~/Nextcloud\ -\ LMU\ Physik/physixbox/physixbox'

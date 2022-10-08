@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE xbel>
+<xbel dbusName="konsole" xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info" xmlns:kdepriv="http://www.kde.org/kdepriv" xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks">
+ <bookmark href="file:///home/danial/Music/Party%20Musik">
+  <title>Party Musik</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/danial">
+  <title>danial</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/danial/git/DaHaCoder/DaHaCoder-repos/my-jekyll">
+  <title>my-jekyll</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name=""/>
+   </metadata>
+  </info>
+ </bookmark>
+ <bookmark href="file:///home/danial/.mozilla/firefox/dg25zrcv.default-release">
+  <title>dg25zrcv</title>
+  <info>
+   <metadata owner="http://freedesktop.org">
+    <bookmark:icon name="preferences-desktop-notification-bell"/>
+   </metadata>
+  </info>
+ </bookmark>
+</xbel>

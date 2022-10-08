@@ -1,0 +1,45 @@
+#!/bin/bash 
+
+
+echo " "
+echo " ******************** "
+echo " RUN: sudo apt update "
+echo " ******************** "
+echo " "
+
+sudo apt update
+
+echo " "
+echo " ====================== "
+echo " sudo apt update - DONE "
+echo " ====================== "
+echo " "
+
+echo " "
+echo " ************************** "
+echo " RUN: sudo apt-full upgrade "
+echo " ************************** "
+echo " "
+
+sudo apt full-upgrade
+
+echo " "
+echo " ============================ "
+echo " sudo apt full-upgrade - DONE "
+echo " ============================ "
+echo " "
+
+echo " "
+echo " ************************ "
+echo " RUN: sudo apt autoremove "
+echo " ************************ "
+echo " "
+
+sudo apt autoremove 
+
+echo " "
+echo " ========================== "
+echo " sudo apt autoremove - DONE "
+echo " ========================== "
+echo " "
+

@@ -1,0 +1,10 @@
+#! /bin/bash
+
+echo "Gebe den Link hier an: "
+read link 
+echo "Welcher Name soll die Datei haben ?"
+read name
+echo "In welchem Pfad soll die Datei eingespeichert werden ? "
+read path 
+
+youtube-dl --extract-audio --audio-format mp3 -o "$path/$name.%(ext)s" $link
