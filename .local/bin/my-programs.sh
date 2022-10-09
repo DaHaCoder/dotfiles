@@ -106,9 +106,9 @@ sudo apt install cowsay -y
 # --------
 # https://www.dev47apps.com/droidcam/linux/
 cd /tmp/
-wget -O droidcam_latest.zip https://files.dev47apps.net/linux/droidcam_1.8.2.zip
+sudo wget -O droidcam_latest.zip https://files.dev47apps.net/linux/droidcam_1.8.2.zip
 # sha1sum: d1038e6d62cac6f60b0dd8caa8d5849c79065a7b
-unzip droidcam_latest.zip -d droidcam
+sudo unzip droidcam_latest.zip -d droidcam
 cd droidcam && sudo apt install libappindicator3-1 -y && sudo ./install-client
 
 # Discord
@@ -149,6 +149,14 @@ sudo apt install elisa -y
 # Filelight
 # ---------
 sudo apt install filelight -y
+
+# Firefox
+# -------
+sudo snap remove firefox 
+sudo add-apt-repository ppa:mozillateam/ppa
+echo 'Package: * Pin: release o=LP-PPA-mozillateam Pin-Priority: 1001 ' | sudo tee /etc/apt/preferences.d/mozilla-firefox
+echo 'Unattended-Upgrade::Allowed-Origins:: "LP-PPA-mozillateam:${distro_codename}";' | sudo tee /etc/apt/apt.conf.d/51unattended-upgrades-firefox
+sudo apt install firefox -y
 
 
 ### --------- ###
@@ -204,7 +212,7 @@ sudo apt install htop -y
 # ----
 # https://jami.net/download-jami-linux/#open-modal-ubuntu-22.04
 sudo apt install gnupg dirmngr ca-certificates curl --no-install-recommends
-curl -s https://dl.jami.net/public-key.gpg | sudo tee /usr/share/keyrings/jami-archive-keyring.gpg > /dev/null
+sudo curl -s https://dl.jami.net/public-key.gpg | sudo tee /usr/share/keyrings/jami-archive-keyring.gpg > /dev/null
 sudo sh -c "echo 'deb [signed-by=/usr/share/keyrings/jami-archive-keyring.gpg] https://dl.jami.net/nightly/ubuntu_22.04/ jami main' > /etc/apt/sources.list.d/jami.list"
 sudo apt-get update && sudo apt-get install jami -y
 
@@ -236,7 +244,7 @@ sudo apt install keepassxc -y
 # Keybase 
 # -------
 # https://keybase.io/docs/the_app/install_linux
-curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
+sudo curl --remote-name https://prerelease.keybase.io/keybase_amd64.deb
 sudo apt install ./keybase_amd64.deb -y
 run_keybase
 
@@ -392,10 +400,9 @@ sudo apt install scangearmp2 -y
 # Signal Desktop
 # --------------
 # https://signal.org/download/#
-wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+sudo wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
 cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
-  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
 sudo apt update && sudo apt install signal-desktop -y
 
 # Simple Scan
@@ -418,7 +425,7 @@ sudo apt install libsox-fmt-all -y
 # Spotify
 # -------
 # https://www.spotify.com/us/download/linux/
-curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+sudo curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
 sudo apt-get update && sudo apt-get install spotify-client -y
 
