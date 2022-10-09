@@ -518,6 +518,10 @@ sudo apt install wxmaxima -y
 ### --- X --- ###
 ### --------- ###
 
+# xclip
+# -----
+sudo apt install xclip -y
+
 # Xournal++
 # ---------
 sudo apt install xournalpp -y
