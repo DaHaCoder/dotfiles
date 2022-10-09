@@ -260,6 +260,12 @@ sudo apt install kolourpaint -y
 # -----
 sudo apt install ktikz -y
 
+# Kvantum
+# -------
+sudo add-apt-repository ppa:papirus/papirus
+sudo apt update
+sudo apt install qt5-style-kvantum qt5-style-kvantum-themes -y
+
 
 ### --------- ###
 ### --- L --- ###
