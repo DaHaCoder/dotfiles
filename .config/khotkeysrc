@@ -1,5 +1,5 @@
 [$Version]
-update_info=spectacle_shortcuts.upd:spectacle-migrate-shortcuts
+update_info=spectacle_shortcuts.upd:spectacle-migrate-shortcuts,konsole_globalaccel.upd:konsole_globalaccel
 
 [ColorEffects:Disabled]
 ChangeSelectionColor[$d]
@@ -40,6 +40,44 @@ ForegroundVisited[$d]
 [Colors:Complementary]
 BackgroundAlternate[$d]
 BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
+
+[Colors:Header]
+BackgroundAlternate[$d]
+BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
+
+[Colors:Header][Inactive]
+BackgroundAlternate[$d]
+BackgroundNormal[$d]
+DecorationFocus[$d]
+DecorationHover[$d]
+ForegroundActive[$d]
+ForegroundInactive[$d]
+ForegroundLink[$d]
+ForegroundNegative[$d]
+ForegroundNeutral[$d]
+ForegroundNormal[$d]
+ForegroundPositive[$d]
+ForegroundVisited[$d]
 
 [Colors:Selection]
 BackgroundAlternate[$d]
@@ -290,7 +328,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_3Triggers0]
-Key=Meta+E
+Key=
 Type=SHORTCUT
 Uuid={a80ef122-3b55-4287-a545-676e523f0bfd}
 
@@ -330,7 +368,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_1_5Actions0]
-CommandURL=brave-browser.desktop
+CommandURL=brave-browser-beta.desktop
 Type=MENUENTRY
 
 [Data_1_5Conditions]
@@ -434,7 +472,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_1_9Actions0]
-CommandURL=appimagekit_0eb95ad55b1461da2fe174d07c015967-Telegram_Desktop.desktop
+CommandURL=org.telegram.desktop._cc4ae4289beaca71c80519c63424aa0e.desktop
 Type=MENUENTRY
 
 [Data_1_9Conditions]
@@ -1308,6 +1346,7 @@ emoticonsTheme[$d]
 parseMode[$d]
 
 [General]
+AllowKDEAppsToRememberWindowPositions[$d]
 BrowserApplication[$d]
 ColorScheme[$d]
 ColorSchemeHash[$d]
@@ -1361,6 +1400,7 @@ Show Speedbar[$d]
 Show hidden files[$d]
 Sort by[$d]
 Sort directories first[$d]
+Sort hidden files last[$d]
 Sort reversed[$d]
 Speedbar Width[$d]
 View Style[$d]
