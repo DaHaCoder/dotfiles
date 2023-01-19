@@ -1,5 +1,5 @@
 #!/bin/bash
-# Thanks to Patrick Haußmann
+# Thanks to Patrick Haußmann -- https://github.com/PatrickHaussmann/dotfiles/blob/master/.bin/extract
 
 set -euf -o pipefail
 
