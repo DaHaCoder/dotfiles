@@ -192,7 +192,7 @@ sudo apt install gnuplot -y
 # ---------
 sudo apt-add-repository ppa:hollywood/ppa
 sudo apt update
-sudo apt install byoby hollywood -y
+sudo apt install byobu hollywood -y
 
 # htop
 # ----
