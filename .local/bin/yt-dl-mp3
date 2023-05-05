@@ -1,0 +1,21 @@
+#! /bin/bash
+
+echo "-----"
+echo "Link:"
+echo "-----"
+read link
+echo "-----"
+echo "Name:"
+echo "-----"
+read name
+echo "---------------"
+echo "Artist - Title:"
+echo "---------------"
+IFS='- ' read -r artist title
+echo "-----"
+echo "Path:"
+echo "-----"
+read path
+
+yt-dlp --extract-audio --audio-format mp3 -o "$path/$name.%(ext)s" $link
+id3tool --set-title="$title" --set-artist="$artist" "${path/#~/$HOME}/$name.mp3"
