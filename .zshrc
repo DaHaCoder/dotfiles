@@ -14,13 +14,14 @@ zstyle :compinstall filename '/home/danial/.zshrc'
 autoload -Uz compinit
 compinit
 # End of lines added by compinstall
-source ~/Programming/git/powerlevel10k/powerlevel10k.zsh-theme
-source ~/Programming/git/powerlevel10k/powerlevel10k.zsh-theme
+source ~/git/powerlevel10k/powerlevel10k.zsh-theme
+source ~/git/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-export TERM=konsole-256color
+# export TERM=konsole-256color
+export TERM=xterm-kitty
 
 if [[ -f "$HOME/.config/aliasrc" ]]; then
     source "$HOME/.config/aliasrc"
@@ -48,8 +49,6 @@ fi
   fi
 
 # adding `.local/bin` to $PATH for bash scripts
-
-
 if ! [[ "$PATH" =~ "$HOME/.local/bin" ]]; then
     export PATH="$PATH:$HOME/.local/bin"
 fi
@@ -103,3 +102,27 @@ zle -N zle-keymap-select
 
 # Start with beam shape cursor on zsh startup and after every command.
 zle-line-init() { zle-keymap-select 'beam'}
+
+# # Base16 Shell
+# BASE16_SHELL="$HOME/.config/base16-shell/"
+# [ -n "$PS1" ] && \
+#     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
+#         source "$BASE16_SHELL/profile_helper.sh"
+        
+# base16_default
+
+### gnuplot kitty integration -- https://sw.kovidgoyal.net/kitty/integrations/  ###
+function iplot {
+    cat <<EOF | gnuplot
+set terminal pngcairo enhanced font 'Fira Sans,10'
+set autoscale
+set samples 1000
+set output '|kitty +kitten icat --stdin yes'
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#fdf6e3" behind
+plot $@
+set output '/dev/null'
+EOF
+
+}
+
+

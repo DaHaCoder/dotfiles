@@ -203,7 +203,7 @@ export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
 ### ------- ###
 
 ## wget
-export WGETRC="$XDG_CONFIG_HOME"/wgetrc
+# export WGETRC="$XDG_CONFIG_HOME"/wgetrc
 
 ## wine
 mkdir -p "$XDG_DATA_HOME"/wineprefixes
@@ -240,3 +240,4 @@ export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 
 ## z
 # export _Z_DATA="$XDG_DATA_HOME"/z
+#. "$HOME/.cargo/env"
