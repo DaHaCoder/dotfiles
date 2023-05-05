@@ -1,5 +1,5 @@
 [$Version]
-update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered
+update_info=kwin.upd:replace-scalein-with-scale,kwin.upd:port-minimizeanimation-effect-to-js,kwin.upd:port-scale-effect-to-js,kwin.upd:port-dimscreen-effect-to-js,kwin.upd:auto-bordersize,kwin.upd:animation-speed,kwin.upd:desktop-grid-click-behavior,kwin.upd:no-swap-encourage,kwin.upd:make-translucency-effect-disabled-by-default,kwin.upd:remove-flip-switch-effect,kwin.upd:remove-cover-switch-effect,kwin.upd:remove-cubeslide-effect,kwin.upd:remove-xrender-backend,kwin.upd:enable-scale-effect-by-default,kwin.upd:overview-group-plugin-id,kwin.upd:animation-speed-cleanup,kwin.upd:replace-cascaded-zerocornered,bismuth_new_logger.upd:bismuth-new-logger
 
 [Compositing]
 Backend=OpenGL
@@ -194,7 +194,7 @@ ShowTabBox=true
 SwitchingMode=0
 
 [Tiling]
-padding=5
+padding=4
 
 [Tiling][03ceadd5-4ade-51c0-8239-505bd2ceac27]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
@@ -202,8 +202,14 @@ tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"wi
 [Tiling][05454296-3469-5496-8e6f-1a0edfcebd3d]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
+[Tiling][5cf0e0bf-c239-511d-8c7b-fe2fe6137827]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
+
 [Tiling][62da399e-bb0f-5f69-b1fd-e20f8c181751]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5031250000000054},{"width":0.4968749999999946}]}
+
+[Tiling][d851e45f-b804-5cb7-8551-c2d2adb784ed]
+tiles={"layoutDirection":"horizontal","tiles":[{"width":0.25},{"width":0.5},{"width":0.25}]}
 
 [Tiling][f6295f05-732c-5867-a771-258d93d23103]
 tiles={"layoutDirection":"horizontal","tiles":[{"width":0.5},{"width":0.5}]}
@@ -239,9 +245,6 @@ SnapOnlyWhenOverlapping=false
 TitlebarDoubleClickCommand=Maximize
 WindowSnapZone=10
 
-[Xwayland]
-Scale=1
-
 [org.kde.kdecoration2]
 BorderSize=Tiny
 BorderSizeAuto=false
@@ -249,5 +252,4 @@ ButtonsOnLeft=MS
 ButtonsOnRight=HIAX
 CloseOnDoubleClickOnMenu=false
 ShowToolTips=true
-library=org.kde.kwin.aurorae
 theme=__aurorae__svg__One-Dark-Title-Blue

@@ -140,7 +140,7 @@ DataCount=4
 
 [Data_1]
 Comment=KMenuEdit Global Shortcuts
-DataCount=13
+DataCount=15
 Enabled=true
 Name=KMenuEdit
 SystemGroup=1
@@ -260,6 +260,58 @@ Key=Meta+Shift+E
 Type=SHORTCUT
 Uuid={ec687df0-07d0-46e0-9a2b-a151af177676}
 
+[Data_1_14]
+Comment=Comment
+Enabled=true
+Name=Alacritty
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_14Actions]
+ActionsCount=1
+
+[Data_1_14Actions0]
+CommandURL=Alacritty.desktop
+Type=MENUENTRY
+
+[Data_1_14Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_14Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_14Triggers0]
+Key=Meta+A
+Type=SHORTCUT
+Uuid={10b16f8c-c1fb-4795-83b5-9f2c1c555637}
+
+[Data_1_15]
+Comment=Comment
+Enabled=true
+Name=Kitty
+Type=SIMPLE_ACTION_DATA
+
+[Data_1_15Actions]
+ActionsCount=1
+
+[Data_1_15Actions0]
+CommandURL=kitty.desktop
+Type=MENUENTRY
+
+[Data_1_15Conditions]
+Comment=
+ConditionsCount=0
+
+[Data_1_15Triggers]
+Comment=Simple_action
+TriggersCount=1
+
+[Data_1_15Triggers0]
+Key=Meta+Return
+Type=SHORTCUT
+Uuid={c043a497-7a47-42aa-8f75-66f622a2aa6a}
+
 [Data_1_1Actions]
 ActionsCount=1
 
@@ -276,7 +328,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_1_1Triggers0]
-Key=Meta+Return
+Key=Ctrl+Return
 Type=SHORTCUT
 Uuid={18e204fc-f7a8-4d2d-8e4a-4de4cc9f0f4d}
 
@@ -1327,7 +1379,7 @@ Comment=Simple_action
 TriggersCount=1
 
 [Data_4Triggers0]
-Key=Ctrl+Shift+Print
+Key=
 Type=SHORTCUT
 Uuid={7391e7ec-e5bf-4328-9943-7a0c9d45e731}
 
@@ -1409,6 +1461,7 @@ listViewIconSize[$d]
 [KScreen]
 ScaleFactor[$d]
 ScreenScaleFactors[$d]
+XwaylandClientsScale[$d]
 
 [KShortcutsDialog Settings]
 Dialog Size[$d]
@@ -1450,3 +1503,6 @@ inactiveBackground[$d]
 inactiveBlend[$d]
 inactiveForeground[$d]
 inactiveFrame[$d]
+
+[tileseditor]
+Edit Tiles[$d]

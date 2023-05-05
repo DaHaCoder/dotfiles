@@ -1,0 +1,31 @@
+[$Version]
+update_info=kwinrules.upd:replace-placement-string-to-enum,kwinrules.upd:use-virtual-desktop-ids
+
+[306012f9-07c9-4b4a-9ac1-3243065209a2]
+Description=Force-Maximize-Bismuth
+maximizehorizrule=2
+maximizevertrule=2
+types=1
+
+[542b0bd4-728f-44da-acc6-4133ffd759ec]
+Description=Force-Maximize-Bismuth
+maximizehorizrule=2
+maximizevertrule=2
+typerule=2
+wmclasscomplete=true
+wmclassmatch=1
+
+[5e161a79-7813-4186-ae0d-a7ae7b5f4ad4]
+Description=Setting Minimum Geometry Size
+minsizerule=2
+types=1
+
+[7d62d5e5-4647-43d2-a1d2-d7fa8855fa31]
+Description=Setting Minimum Size
+wmclassmatch=1
+
+[ca4b1c38-c4f3-49c9-a984-6f743882196c]
+Description=Setting Minimum Geometry Size
+minsize=1,1
+minsizerule=2
+types=1
