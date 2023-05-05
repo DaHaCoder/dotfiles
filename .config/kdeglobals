@@ -1,0 +1,158 @@
+[$Version]
+update_info=filepicker.upd:filepicker-remove-old-previews-entry,fonts_global.upd:Fonts_Global,fonts_global_toolbar.upd:Fonts_Global_Toolbar,icons_remove_effects.upd:IconsRemoveEffects,kwin.upd:animation-speed,style_widgetstyle_default_breeze.upd:StyleWidgetStyleDefaultBreeze
+
+[ColorEffects:Disabled]
+ChangeSelectionColor=
+Color=56,56,56
+ColorAmount=0
+ColorEffect=0
+ContrastAmount=0.65
+ContrastEffect=1
+Enable=
+IntensityAmount=0.1
+IntensityEffect=2
+
+[ColorEffects:Inactive]
+ChangeSelectionColor=false
+Color=112,111,110
+ColorAmount=-0.9500000000000001
+ColorEffect=0
+ContrastAmount=0.1
+ContrastEffect=0
+Enable=true
+IntensityAmount=0
+IntensityEffect=0
+
+[Colors:Button]
+BackgroundAlternate=17,18,22
+BackgroundNormal=22,24,29
+DecorationFocus=60,120,255
+DecorationHover=16,166,212
+ForegroundActive=61,174,233
+ForegroundInactive=242,243,243
+ForegroundLink=41,128,185
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=254,254,254
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:Complementary]
+BackgroundAlternate=17,18,22
+BackgroundNormal=17,18,22
+DecorationFocus=55,67,80
+
+[Colors:Selection]
+BackgroundAlternate=60,120,255
+BackgroundNormal=60,120,255
+DecorationFocus=60,120,255
+DecorationHover=16,166,212
+ForegroundActive=252,252,252
+ForegroundInactive=252,253,253
+ForegroundLink=253,188,75
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=254,254,254
+ForegroundPositive=156,83,198
+ForegroundVisited=189,195,199
+
+[Colors:Tooltip]
+BackgroundAlternate=17,18,22
+BackgroundNormal=28,29,36
+DecorationFocus=60,120,255
+DecorationHover=16,166,212
+ForegroundActive=61,174,233
+ForegroundInactive=242,243,243
+ForegroundLink=41,128,185
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=252,253,253
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:View]
+BackgroundAlternate=17,18,22
+BackgroundNormal=28,29,36
+DecorationFocus=60,120,255
+DecorationHover=16,166,212
+ForegroundActive=61,174,233
+ForegroundInactive=242,243,243
+ForegroundLink=31,140,236
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=254,254,254
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[Colors:Window]
+BackgroundAlternate=17,18,22
+BackgroundNormal=28,29,36
+DecorationFocus=60,120,255
+DecorationHover=16,166,212
+ForegroundActive=61,174,233
+ForegroundInactive=242,243,243
+ForegroundLink=41,128,185
+ForegroundNegative=67,205,189
+ForegroundNeutral=95,125,205
+ForegroundNormal=252,253,253
+ForegroundPositive=156,83,198
+ForegroundVisited=127,140,141
+
+[DirSelect Dialog]
+DirSelectDialog Size=869,596
+History Items[$e]=file:$HOME/Music/Mathe Songs,file:$HOME/Personalization/Themes/Amethyst-roundDark,file:$HOME/Personalization/Themes/Carl,file:$HOME/Pictures/Screenshots,file:$HOME/Nextcloud - LMU Physik,file:$HOME/Nextcloud - LMU Physik,file:$HOME/Nextcloud - LMU Physik,file:$HOME/Nextcloud - LMU Physik,file:$HOME/Personalization,file:$HOME/Programming,file:$HOME/VeraCrypt,file:$HOME/Pictures,file:$HOME/Nextcloud - LMU Physik,file:$HOME/Music,file:$HOME/KeePass,file:$HOME/Documents,file:$HOME/Programming,file:$HOME/Nextcloud - LMU Physik/physixbox/physixbox,file:$HOME/Personalization/Themes/Orchis/Orchis-dark,file:$HOME/Personalization/Themes/Orchis
+
+[General]
+AllowKDEAppsToRememberWindowPositions=false
+BrowserApplication=brave-browser-beta.desktop
+ColorSchemeHash=cac271ea48697caf5cd1f73034c09478483c5e19
+XftAntialias=true
+XftHintStyle=hintslight
+XftSubPixel=rgb
+fixed=Helvetica [pyrs],10,-1,5,50,0,0,0,0,0
+font=Helvetica [pyrs],10,-1,5,50,0,0,0,0,0
+menuFont=Helvetica [pyrs],10,-1,5,50,0,0,0,0,0
+smallestReadableFont=Noto Sans,9,-1,5,50,0,0,0,0,0
+toolBarFont=Helvetica [pyrs],10,-1,5,50,0,0,0,0,0
+
+[Icons]
+Theme=Tela-circle-dark
+
+[KDE]
+LookAndFeelPackage=Carl
+SingleClick=false
+widgetStyle=kvantum
+
+[KFileDialog Settings]
+Allow Expansion=false
+Automatically select filename extension=true
+Breadcrumb Navigation=true
+Decoration position=2
+LocationCombo Completionmode=5
+PathCombo Completionmode=5
+Show Bookmarks=false
+Show Full Path=false
+Show Inline Previews=true
+Show Preview=false
+Show Speedbar=true
+Show hidden files=false
+Sort by=Name
+Sort directories first=true
+Sort hidden files last=false
+Sort reversed=false
+Speedbar Width=138
+View Style=DetailTree
+
+[KScreen]
+ScaleFactor=1.25
+ScreenScaleFactors=DP-2=1.25;DP-3=1.25;
+XwaylandClientsScale=false
+
+[WM]
+activeBackground=28,29,36
+activeBlend=28,29,36
+activeFont=Helvetica [pyrs],10,-1,5,50,0,0,0,0,0
+activeForeground=237,240,242
+inactiveBackground=28,29,36
+inactiveBlend=28,29,36
+inactiveForeground=181,182,182
