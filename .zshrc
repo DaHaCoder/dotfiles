@@ -67,7 +67,7 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
 # Better completion for killall
 zstyle ':completion:*:killall:*' command 'ps -u $USER -o cmd'
 
-### plugins 
+### plugins
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 #source /usr/share/zsh-history-substring-search
@@ -108,7 +108,7 @@ zle-line-init() { zle-keymap-select 'beam'}
 # [ -n "$PS1" ] && \
 #     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
 #         source "$BASE16_SHELL/profile_helper.sh"
-        
+
 # base16_default
 
 ### gnuplot kitty integration -- https://sw.kovidgoyal.net/kitty/integrations/  ###
@@ -126,3 +126,6 @@ EOF
 }
 
 
+
+# Created by `pipx` on 2023-08-04 19:06:36
+export PATH="$PATH:/home/danial/.local/bin"
