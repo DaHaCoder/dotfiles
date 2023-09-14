@@ -1,0 +1,139 @@
+### Snippets for KaTeX ###
+### ================== ###
+
+# Since I was not able to figure out how to implement
+# macros/own commands in KaTeX with jekyll-katex and want
+# to use the macros/commands of the 'physics'-latex-package,
+# I am going to implement markdown snippets as an alternative.
+
+# sets
+# ====
+snippet \N "\mathbb{N}" i
+\mathbb{N}
+endsnippet
+
+snippet \Z "\mathbb{Z}" i
+\mathbb{Z}
+endsnippet
+
+snippet \Q "\mathbb{Q}" i
+\mathbb{Q}
+endsnippet
+
+snippet \R "\mathbb{R}" i
+\mathbb{R}
+endsnippet
+
+snippet \C "\mathbb{C}" i
+\mathbb{C}
+endsnippet
+
+# math roman
+# ==========
+snippet \D "\mathrm{d}" i
+\mathrm{d}
+endsnippet
+
+snippet \E "\mathrm{e}" i
+\mathrm{e}
+endsnippet
+
+snippet \I "\mathrm{i}" i
+\mathrm{i}
+endsnippet
+
+# vectors and operations on R³
+# ============================
+snippet \vb "\vb*{#1}" i
+\boldsymbol{$1} $0
+endsnippet
+
+snippet \vu "\vu*{#1}" i
+\hat{\boldsymbol{$1}} $0
+endsnippet
+
+snippet \vdot "\vdot" i
+\boldsymbol{\cdot} $0
+endsnippet
+
+snippet \cp "\cp" i
+\boldsymbol{\times} $0
+endsnippet
+
+snippet \grad "\grad{#1}" i
+\boldsymbol{\nabla} $0
+endsnippet
+
+snippet \div "\div{#1}" i
+\boldsymbol{\nabla \cdot $1} $0
+endsnippet
+
+snippet \curl "\curl{#1}" i
+\boldsymbol{\nabla \times $1} $0
+endsnippet
+
+snippet \laplacian "\laplacian{#1}" i
+\boldsymbol{\nabla}^{2} $0
+endsnippet
+
+snippet \box "\box{#1}" i
+\Box$0
+endsnippet
+
+# derivatives
+# ===========
+snippet \dd "\dd{}" i
+\operatorname{d}\!$1\, $0
+endsnippet
+
+snippet \ddn "\dd[]{}" i
+\operatorname{d}^{$1}\!$2\, $0
+endsnippet
+
+snippet \dv "\dv{}{}" i
+\frac{\operatorname{d}\!$1}{\operatorname{d}\!$2} $0
+endsnippet
+
+snippet \dvn "\dv[]{}{}" i
+\frac{\operatorname{d}^{$1}\!$2}{\operatorname{d}\!$3^{$1}} $0
+endsnippet
+
+snippet \pdv "\pdv{}{}" i
+\frac{\partial $1}{\partial $2} $0
+endsnippet
+
+snippet \pdvn "\pdv[]{}{}" i
+\frac{\partial^{$1} $2}{\partial $3^{$1}} $0
+endsnippet
+
+# Integrals
+# =========
+
+snippet int1 "Integral with 1 variable (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}}\!\!\operatorname{d}\!$3\, $0
+endsnippet
+
+snippet int2 "Integral with 2 variables (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}}\!\!\operatorname{d}\!$3\!\!\!\!\int\limits_{${4:-\infty}}^{${5:\infty}}\!\!\operatorname{d}\!$6\, $0
+endsnippet
+
+snippet int2pol "Integral with 2 variables in polar coordinates (default integration limits: 0 to 2\pi, 0 to \infty" i
+\int\limits_{${1:0}}^{${2:2\pi}}\!\!\operatorname{d}\!$3\!\!\int\limits_{${4:0}}^{${5:\infty}}\!\!\operatorname{d}\!$6\,$6 $0
+endsnippet
+
+snippet int3 "Integral with 3 variables (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}}\!\!\operatorname{d}\!$3\!\!\!\!\int\limits_{${4:-\infty}}^{${5:\infty}}\!\!\operatorname{d}\!$6\!\!\!\!\int\limits_{${7:-\infty}}^{${8:\infty}}\!\!\operatorname{d}\!$9\, $0
+endsnippet
+
+snippet int3cyl "Integral with 3 variables in cylindrical coordinates (default integration limits: 0 to 2\pi, 0 to \infty, -\infty to \infty)" i
+\int\limits_{${1:0}}^{${2:2\pi}}\!\!\operatorname{d}\!$3\!\!\int\limits_{${4:0}}^{${5:\infty}}\!\!\operatorname{d}\!$6\,$6\!\!\int\limits_{${7:-\infty}}^{${8:\infty}}\!\!\operatorname{d}\!$9\, $0
+endsnippet
+
+snippet int3spher "Integral with 3 variables in spherical coordinates (default integration limits: 0 to 2\pi, 0 to \pi, 0 to \infty)" i
+\int\limits_{${1:0}}^{${2:2\pi}}\!\!\operatorname{d}\!$3\,\!\!\int\limits_{${4:0}}^{${5:\pi}}\!\!\operatorname{d}\!$6\,\sin($6)\!\!\int\limits_{${7:0}}^{${8:\infty}}\!\!\operatorname{d}\!$9\,$9^2 $0
+endsnippet
+
+snippet intn "Integral with 1 variable in n dimensions (default: integration over R^3)" i
+\int\limits_{${1:\R^3}}\!\!\operatorname{d}^{${2:3}}\!$3\, $0
+endsnippet
+
