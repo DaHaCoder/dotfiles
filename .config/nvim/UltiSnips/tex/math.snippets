@@ -1,51 +1,50 @@
-snippet ff "The '\frac{}{}' command" 
+snippet ff "The '\frac{}{}' command" i
 \frac{$1}{$2}$0
 endsnippet
 
-snippet vb "The '\vb*{}' command"  
+snippet vb "The '\vb*{}' command" i
 \vb*{$1}$0
-endsnippet 
+endsnippet
 
-snippet vu "The '\vu*{}_{}' command" 
+snippet vu "The '\vu*{}_{}' command" i
 \vu*{${1:e}}_{$2}$0
-endsnippet 
+endsnippet
 
-snippet os "The '\overset{}{}' command" 
+snippet os "The '\overset{}{}' command" i
 \overset{$2}{$1}$0
 endsnippet
 
-snippet ub "The '\underbrace{}_{}' command"  
+snippet ub "The '\underbrace{}_{}' command" i
 \underbrace{${1:${VISUAL:}}}_{$2}$0
 endsnippet
 
 # Integrals
 # =========
 
-snippet int1 "Integral with 1 variable (default integration limits: -\infty to \infty)" A 
-\int_{${1:-\infty}}^{${2:\infty}} \dd{$3} $0
+snippet int1 "Integral with 1 variable (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}} \dd{$3} $0
 endsnippet
 
-snippet int2 "Integral with 2 variables (default integration limits: -\infty to \infty)" A
-\int_{${1:-\infty}}^{${2:\infty}} \dd{$3} \int_{${4:-\infty}}^{${5:\infty}} \dd{$6} $0
+snippet int2 "Integral with 2 variables (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}} \dd{$3} \int\limits_{${4:-\infty}}^{${5:\infty}} \dd{$6} $0
 endsnippet
 
-snippet pol-int2 "Integral with 2 variables in polar coordinates (default integration limits: 0 to 2\pi, 0 to \infty" A
-\int_{${1:0}}^{${2:2\pi}} \dd{$3} \int_{${4:0}}^{${5:\infty}} \dd{$6} $0
-endsnippet 
-
-snippet int3 "Integral with 3 variables (default integration limits: -\infty to \infty)" A
-\int_{${1:-\infty}}^{${2:\infty}} \dd{$3} \int_{${4:-\infty}}^{${5:\infty}} \dd{$6} \int_{${7:-\infty}}^{${8:\infty}} \dd{$9} $0
-endsnippet 
-
-snippet cyl-int3 "Integral with 3 variables in cylindrical coordinates (default integration limits: 0 to 2\pi, 0 to \infty, -\infty to \infty)" A
-\int_{${1:0}}^{${2:2\pi}} \dd{$3} \int_{${4:0}}^{${5:\infty}} \dd{$6} $6 \int_{${7:-\infty}}^{${8:\infty}} \dd{$9} $0
+snippet int2pol "Integral with 2 variables in polar coordinates (default integration limits: 0 to 2\pi, 0 to \infty" i
+\int\limits_{${1:0}}^{${2:2\pi}} \dd{$3} \int\limits_{${4:0}}^{${5:\infty}} \dd{$6} $0
 endsnippet
 
-snippet spher-int3 "Integral with 3 variables in spherical coordinates (default integration limits: 0 to 2\pi, 0 to \pi, 0 to \infty)" A
-\int_{${1:0}}^{${2:2\pi}} \dd{$3} \int_{${4:0}}^{${5:\pi}} \dd{$6} \sin($6) \int_{${7:0}}^{${8:\infty}} \dd{$9} $9^2 $0  
+snippet int3 "Integral with 3 variables (default integration limits: -\infty to \infty)" i
+\int\limits_{${1:-\infty}}^{${2:\infty}} \dd{$3} \int\limits_{${4:-\infty}}^{${5:\infty}} \dd{$6} \int\limits_{${7:-\infty}}^{${8:\infty}} \dd{$9} $0
 endsnippet
 
-snippet int-n "Integral with 1 variable in n dimensions (default: integration over R^3)" A
-\int_{${1:\R^3}} \dd[${2:3}]{$3} $0
+snippet int3cyl "Integral with 3 variables in cylindrical coordinates (default integration limits: 0 to 2\pi, 0 to \infty, -\infty to \infty)" i
+\int\limits_{${1:0}}^{${2:2\pi}} \dd{$3} \int\limits_{${4:0}}^{${5:\infty}} \dd{$6} $6 \int\limits_{${7:-\infty}}^{${8:\infty}} \dd{$9} $0
 endsnippet
 
+snippet int3spher "Integral with 3 variables in spherical coordinates (default integration limits: 0 to 2\pi, 0 to \pi, 0 to \infty)" i
+\int\limits_{${1:0}}^{${2:2\pi}} \dd{$3} \int\limits_{${4:0}}^{${5:\pi}} \dd{$6} \sin($6) \int\limits_{${7:0}}^{${8:\infty}} \dd{$9} $9^2 $0
+endsnippet
+
+snippet intn "Integral with 1 variable in n dimensions (default: integration over R^3)" i
+\int\limits_{${1:\R^3}} \dd[${2:3}]{$3} $0
+endsnippet
