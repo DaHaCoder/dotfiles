@@ -12,6 +12,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " Plug 'frabjous/knap'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 Plug 'preservim/nerdtree'
+Plug 'NvChad/nvim-colorizer.lua'
 " Plug 'emakman/nvim-latex-previewer'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'nvim-lua/plenary.nvim'
@@ -294,6 +295,12 @@ let g:mkdp_filetypes = ['markdown']
 let g:mkdp_theme = 'dark'
 
 " ---------------------
+
+
+" nvim-colorizer
+" --------------
+lua require 'colorizer'.setup()
+" --------------
 
 
 " vim-latex-live-preview
