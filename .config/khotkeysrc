@@ -1,5 +1,5 @@
 [$Version]
-update_info=spectacle_shortcuts.upd:spectacle-migrate-shortcuts,konsole_globalaccel.upd:konsole_globalaccel
+update_info=spectacle_shortcuts.upd:spectacle-migrate-shortcuts,konsole_globalaccel.upd:konsole_globalaccel,konsole.upd:konsole_globalaccel
 
 [ColorEffects:Disabled]
 ChangeSelectionColor[$d]
@@ -524,7 +524,7 @@ Type=SIMPLE_ACTION_DATA
 ActionsCount=1
 
 [Data_1_9Actions0]
-CommandURL=org.telegram.desktop._cc4ae4289beaca71c80519c63424aa0e.desktop
+CommandURL=org.telegram.desktop._7d12533b460a31098e6e5c7a9ce08547.desktop
 Type=MENUENTRY
 
 [Data_1_9Conditions]
@@ -1403,6 +1403,8 @@ BrowserApplication[$d]
 ColorScheme[$d]
 ColorSchemeHash[$d]
 Name[$d]
+TerminalApplication[$d]
+TerminalService[$d]
 XftAntialias[$d]
 XftHintStyle[$d]
 XftSubPixel[$d]
@@ -1476,6 +1478,9 @@ Size[$d]
 
 [PanelIcons]
 Size[$d]
+
+[PreviewSettings]
+MaximumRemoteSize[$d]
 
 [SmallIcons]
 Size[$d]
