@@ -8,31 +8,31 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-export XDG_CONFIG_HOME=$HOME/.config
-export XDG_DATA_HOME=$HOME/.local/share
-export XDG_CACHE_HOME=$HOME/.cache
+# export XDG_CONFIG_HOME=$HOME/.config
+# export XDG_DATA_HOME=$HOME/.local/share
+# export XDG_CACHE_HOME=$HOME/.cache
 
 ##### --- Paths for XDG base directory, see https://wiki.archlinux.org/index.php/XDG_Base_Directory --- #####
 ### -- A -- ###
 
 ## anaconda
-export CONDARC="$XDG_CONFIG_HOME/conda/condarc"
+# export CONDARC="$XDG_CONFIG_HOME/conda/condarc"
 
 ## Anki
 #anki -b "$XDG_DATA_HOME"/Anki
 
 ## atom
-export ATOM_HOME="$XDG_DATA_HOME"/atom
+# export ATOM_HOME="$XDG_DATA_HOME"/atom
 
 ### -- B -- ###
 
 ## bash-completion
-export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME"/bash-completion/bash_completion
+# export BASH_COMPLETION_USER_FILE="$XDG_CONFIG_HOME"/bash-completion/bash_completion
 
 ## bundle
-export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
-export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
-export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
+# export BUNDLE_USER_CONFIG="$XDG_CONFIG_HOME"/bundle
+# export BUNDLE_USER_CACHE="$XDG_CACHE_HOME"/bundle
+# export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 
 ### -- C -- ###
 
@@ -45,23 +45,23 @@ export BUNDLE_USER_PLUGIN="$XDG_DATA_HOME"/bundle
 ### -- D -- ###
 
 ## dvdcss
-export DVDCSS_CACHE="$XDG_DATA_HOME"/dvdcss
+# export DVDCSS_CACHE="$XDG_DATA_HOME"/dvdcss
 
 ### -- E -- ###
 
 ### -- F -- ###
 
 ## FFmpeg
-export FFMPEG_DATADIR="XDG_CONFIG_HOME"/ffmpeg
+# export FFMPEG_DATADIR="XDG_CONFIG_HOME"/ffmpeg
 
 ### -- G -- ###
 
 ## gem
-export GEM_HOME="$XDG_DATA_HOME"/gem
-export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
+# export GEM_HOME="$XDG_DATA_HOME"/gem
+# export GEM_SPEC_CACHE="$XDG_CACHE_HOME"/gem
 
 ## gnupg
-export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+# export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 
 ## gtk
 export GTK_RC_FILES="$XDG_CONFIG_HOME"/gtk-1.0/gtkrc
@@ -77,42 +77,42 @@ export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
 export _JAVA_OPTIONS="-Djava.utilprefs.userRoot=$XDG_CONFIG_HOME"/java
 
 ## jupyter
-export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
-export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+# export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+# export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
 
 
 ### -- K -- ###
 
 ## kde
-export KDEHOME="$XDG_CONFIG_HOME"/kde
+# export KDEHOME="$XDG_CONFIG_HOME"/kde
 
 ## kodi
-KODI_DATA=$XDG_DATA_HOME/kodi
+# KODI_DATA=$XDG_DATA_HOME/kodi
 
 ### -- L -- ###
 
 ## latexmk
-XDG_CONFIG_HOME/latexmk/latexmkrc
+# XDG_CONFIG_HOME/latexmk/latexmkrc
 
 ### -- M -- ###
 
 ## Mathematica
-export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
+# export MATHEMATICA_USERBASE="$XDG_CONFIG_HOME"/mathematica
 
 ## maxima
-export MAXIMA_USERDIR="$XDG_CONFIG_HOME"/maxima
+# export MAXIMA_USERDIR="$XDG_CONFIG_HOME"/maxima
 
 ## MOC
-mocp -M "$XDG_CONFIG_HOME"/moc,
-mocp -O MOCDir="$XDG_CONFIG_HOME"/moc
+# mocp -M "$XDG_CONFIG_HOME"/moc,
+# mocp -O MOCDir="$XDG_CONFIG_HOME"/moc
 
 ## mplayer
-export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
+# export MPLAYER_HOME="$XDG_CONFIG_HOME"/mplayer
 
 ### -- N -- ###
 
 ## npm
-export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
+# export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 
 ## nvm
 # export NVM_DIR="$HOME/.nvm"
@@ -122,13 +122,13 @@ export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME"/npm/npmrc
 ### -- O -- ###
 
 ## octave
-export OCTAVE_HISTFILE="$XDG_CACHE_HOME"/octave-hsts
-export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME"/octave/octaverc
+# export OCTAVE_HISTFILE="$XDG_CACHE_HOME"/octave-hsts
+# export OCTAVE_SITE_INITFILE="$XDG_CONFIG_HOME"/octave/octaverc
 
 #XDG_CONFIG_HOME/octave/octaverc
-source /usr/share/octave/site/m/startup/octaverc;
-pkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;
-pkg local_list /home/danial/.local/share/octave/octave_packages;
+# source /usr/share/octave/site/m/startup/octaverc;
+# pkg prefix ~/.local/share/octave/packages ~/.local/share/octave/packages;
+# pkg local_list /home/danial/.local/share/octave/octave_packages;
 
 
 ### -- P -- ###
@@ -138,54 +138,54 @@ pkg local_list /home/danial/.local/share/octave/octave_packages;
 ### -- R -- ###
 
 ## Rust#Rustup
-#export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
+# export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
 
 ### -- S -- ###
 
 ## sage
-#export DOT_SAGE="$XDG_CONFIG_HOME"/sage
+# export DOT_SAGE="$XDG_CONFIG_HOME"/sage
 
 ### -- T -- ###
 
 ## TeamSpeak
-#export TS3_CONFIG_DIR="$XDG_CONFIG_HOME"/ts3client
+# export TS3_CONFIG_DIR="$XDG_CONFIG_HOME"/ts3client
 
 ## texmf
-export TEXMFHOME=$XDG_DATA_HOME/texmf
-export TEXMFVAR=$XDG_CACHE_HOME/texlive/texmf-var
-export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
+# export TEXMFHOME=$XDG_DATA_HOME/texmf
+# export TEXMFVAR=$XDG_CACHE_HOME/texlive/texmf-var
+# export TEXMFCONFIG=$XDG_CONFIG_HOME/texlive/texmf-config
 
 ### -- U -- ###
 
 ## units
-units --history "$XDG_CACHE_HOME"/units_history
+# units --history "$XDG_CACHE_HOME"/units_history
 
 ### -- V -- ###
 
 ### -- W -- ###
 
 ## wget
-export WGETRC="$XDG_CONFIG_HOME"/wgetrc
+# export WGETRC="$XDG_CONFIG_HOME"/wgetrc
 
 ## wine
-mkdir -p "$XDG_DATA_HOME"/wineprefixes
-export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
+# mkdir -p "$XDG_DATA_HOME"/wineprefixes
+# export WINEPREFIX="$XDG_DATA_HOME"/wineprefixes/default
 
 ### -- X -- ###
 
 ## x2goclient
-#alias x2goclient="x2goclient --home=$HOME/.config
+# alias x2goclient="x2goclient --home=$HOME/.config
 
 ## xbindkeys
-#xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
+# xbindkeys -f "$XDG_CONFIG_HOME"/xbindkeys/config
 
 ## xinit
-export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
-export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverr
-startx "$XDG_CONFIG_HOME"/X11/xinitrc -- "$XDG_CONFIG_HOME"/X11/xserverrc vt1
+# export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+# export XSERVERRC="$XDG_CONFIG_HOME"/X11/xserverr
+# startx "$XDG_CONFIG_HOME"/X11/xinitrc -- "$XDG_CONFIG_HOME"/X11/xserverrc vt1
 
 ## xorg-xauth
-export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
+# export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 ## xorg-xrdb
 #xdb -load ~/.config/X11/xresources
@@ -202,21 +202,23 @@ export XAUTHORITY="$XDG_RUNTIME_DIR"/Xauthority
 
 
 # if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
-fi
+# if [ -n "$BASH_VERSION" ]; then
+#     # include .bashrc if it exists
+#     if [ -f "$HOME/.bashrc" ]; then
+# 	. "$HOME/.bashrc"
+#     fi
+# fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+# if [ -d "$HOME/bin" ] ; then
+#     PATH="$HOME/bin:$PATH"
+# fi
 
 # set PATH so it includes user's private bin if it exists
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
-eval $(/bin/brew shellenv)
-. "$HOME/.cargo/env"
+# if [ -d "$HOME/.local/bin" ] ; then
+#     PATH="$HOME/.local/bin:$PATH"
+# fi
+# eval $(/bin/brew shellenv)
+# . "$HOME/.cargo/env"
+
+# export QT_QPA_PLATFORM=xcb
