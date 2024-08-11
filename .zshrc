@@ -41,6 +41,9 @@ fi
 # source: https://askubuntu.com/questions/264283/switch-command-output-language-from-native-language-to-english
 export LC_ALL=C
 
+# unset ksshaskpass-bullsh*t
+unset SSH_ASKPASS
+
 # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
