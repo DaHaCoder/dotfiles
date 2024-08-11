@@ -37,6 +37,10 @@ fi
 # alias c='clear'
 # alias phbox='cd ~/Nextcloud\ -\ LMU\ Physik/physixbox/physixbox'
 
+# change language of terminal
+# source: https://askubuntu.com/questions/264283/switch-command-output-language-from-native-language-to-english
+export LC_ALL=C
+
 # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -122,5 +126,6 @@ set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#fdf6e3" behi
 plot $@
 set output '/dev/null'
 EOF
-
 }
+
+
