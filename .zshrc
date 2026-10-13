@@ -37,13 +37,6 @@ fi
 # alias c='clear'
 # alias phbox='cd ~/Nextcloud\ -\ LMU\ Physik/physixbox/physixbox'
 
-# change language of terminal
-# source: https://askubuntu.com/questions/264283/switch-command-output-language-from-native-language-to-english
-export LC_ALL=C
-
-# unset ksshaskpass-bullsh*t
-unset SSH_ASKPASS
-
 # enable color support of ls and also add handy aliases
   if [ -x /usr/bin/dircolors ]; then
       test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -121,14 +114,91 @@ zle-line-init() { zle-keymap-select 'beam'}
 ### gnuplot kitty integration -- https://sw.kovidgoyal.net/kitty/integrations/  ###
 function iplot {
     cat <<EOF | gnuplot
-set terminal pngcairo enhanced font 'Fira Sans,10'
+set terminal pngcairo enhanced size 1920, 1080 font 'Latin Modern Sans Regular,40'
+set style line 50 lt 1 lc rgb "white" lw 5
+set grid dashtype (1.0, 2.0) lc rgb "white" lw 0.5
+set border ls 50 rgb "white"
+set tics textcolor rgb "white"
+set key textcolor variable
 set autoscale
 set samples 1000
 set output '|kitty +kitten icat --stdin yes'
-set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#fdf6e3" behind
+set object 1 rectangle from screen 0,0 to screen 1,1 fillcolor rgb"#131a24" behind noborder
 plot $@
 set output '/dev/null'
 EOF
+
 }
 
 
+### 'Unblurry' QT-apps by forcing them to use Wayland instead of XWayland -- https://www.reddit.com/r/gnome/comments/16wfkkb/xwayland_apps_blurry_with_fractional_scaling/
+# export QT_QPA_PLATFORM=wayland export SDL_VIDEODRIVER=wayland
+# APP --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland
+#
+#
+
+
+### ANACONDA
+export PATH="/home/danial/anaconda3/bin:$PATH"  # commented out by conda initialize
+
+
+### MINICONDA
+export PATH="/home/danial/miniconda3/bin:$PATH"  # commented out by conda initialize
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/danial/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/danial/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/danial/anaconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/danial/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+unset SSH_ASKPASS
+
+### CREATE LATEX PROJECT FROM TEMPLATE, FOR EAMPLE, EXERCISE SHEET
+texnew_sheet() {
+    if [ -z "$1" ]; then
+        echo "Error: Please type a projectname (i.e. texnew_sheet my_sheet)"
+        return 1
+    fi
+
+    # path to directory of template for my exercise sheets: $HOME/Documents/TeX-Dokumente/Templates/Studium/sheet-template
+    local TEMPLATE_DIR="$HOME/Documents/TeX-Dokumente/Templates/Studium/sheet-template"
+    local TARGET_DIR="./$1"
+    local PROJ_NAME="$1"
+
+    # check if template exists
+    if [ ! -d "$TEMPLATE_DIR" ]; then
+        echo "Error: Template directory '$TEMPLATE_DIR' not found."
+        return 1
+    fi
+
+    # create directory and copy template
+    mkdir -p "$TARGET_DIR"
+
+    # copy template files and rename according to PROJ_NAME
+    cp "$TEMPLATE_DIR/main_sheet-template.tex" "$TARGET_DIR/main_$PROJ_NAME.tex"
+    cp "$TEMPLATE_DIR/preamble_sheet-template.tex" "$TARGET_DIR/preamble_$PROJ_NAME.tex"
+
+    # ignore other files aside of `main_sheet-template.tex` and `preamble_sheet-template.tex`:
+    # rsync -a --exclude='main_sheet-template.tex' --exclude='preamble_sheet-template.tex' "$TEMPLATE_DIR/" "$TARGET_DIR/"
+
+    # change to new directory
+    cd "$TARGET_DIR" || return
+
+    # change `\input{preamble_sheet-template.tex}` in main_PROJ_NAME.tex file:
+    sed -i "" "s/preamble_sheet-template/preamble_$PROJ_NAME/g" "main_$PROJ_NAME.tex" 2>/dev/null || \
+        sed -i "s/preamble_sheet-template/preamble_$PROJ_NAME/g" "main_$PROJ_NAME.tex"
+
+    # open main.tex and preamble.tex in neovim
+    # :chec::checq
+    nvim -O "main_$PROJ_NAME.tex" "preamble_$PROJ_NAME.tex"
+}
+# let g:python3_host_prog = '/home/danial/anaconda3/bin/python3'
